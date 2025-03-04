@@ -87,6 +87,9 @@ function deleteContact(firstName, lastName) {
     }
 }
 
+// UC 6 function to find number of contact
+let getContactCount = ()=> {return addressBook.reduce(count => count + 1, 0)};
+
 // UC 3 Creating a Contact and storing it in an array 
 let addressBook = [];
 
@@ -107,3 +110,6 @@ addressBook.forEach(contact => console.log(contact.toString()));
 
 // deleting the contact1
 deleteContact("Hello", "World");
+
+// finding the total contact
+console.log(getContactCount());
