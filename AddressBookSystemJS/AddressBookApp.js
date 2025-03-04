@@ -62,7 +62,7 @@ class Contact {
     }
 }
 
-// Creating a Contact and storing it in an array 
+// UC 3 Creating a Contact and storing it in an array 
 let addressBook = [];
 
 let contact1 = new Contact("Hello", "World", "123 Street", "Bhopal", "MadhyaPradesh", "100001", "1234567890", "hello.world@example.com");
