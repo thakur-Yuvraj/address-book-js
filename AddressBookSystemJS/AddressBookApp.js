@@ -122,6 +122,16 @@ function findContactsByState(state) {
     return addressBook.filter(contact => contact.state === state).toString();
 }
 
+// UC 10 Function to count contacts by city
+function countContactsByCity(city) {
+    return addressBook.reduce((count, contact) => contact.city === city ? count + 1 : count, 0);
+}
+
+// UC 10 Function to count contacts by state
+function countContactsByState(state) {
+    return addressBook.reduce((count, contact) => contact.state === state ? count + 1 : count, 0);
+}
+
 // UC 3 Creating a Contact and storing it in an array 
 let addressBook = [];
 
@@ -159,4 +169,7 @@ console.log("Contact Exist ? : " + searchContactsByCity("Bhopal"));
 
 
 // printing contact by city
-console.log("Contact Exist ? : " + findContactsByCity("Bhopal"));
+console.log("Contact : " + findContactsByCity("Bhopal"));
+
+// count contact by city
+console.log("Contact Count  : " + countContactsByCity("Bhopal"));
