@@ -103,11 +103,21 @@ function addContact(newContact) {
 }
 
 // UC 8 Function to find contacts by city
+function searchContactsByCity(city) {
+    return addressBook.filter(contact => contact.city === city).toString().length > 0;
+}
+
+// UC 8 Function to find contacts by state
+function searchContactsByState(state) {
+    return addressBook.filter(contact => contact.state === state).toString().length > 0;
+}
+
+// UC 9 Function to find contacts by city and return the contact
 function findContactsByCity(city) {
     return addressBook.filter(contact => contact.city === city).toString();
 }
 
-// UC 8 Function to find contacts by state
+// UC 9 Function to find contacts by state and return the contact
 function findContactsByState(state) {
     return addressBook.filter(contact => contact.state === state).toString();
 }
@@ -145,4 +155,8 @@ addContact(new Contact("Hello", "World", "123 Street", "Bhopal", "MadhyaPradesh"
 console.log("Updated Address Book:", addressBook.map(c => c.toString()));
 
 // finding contact by city
-console.log("Contact , " + findContactsByCity("Bhopal"));
+console.log("Contact Exist ? : " + searchContactsByCity("Bhopal"));
+
+
+// printing contact by city
+console.log("Contact Exist ? : " + findContactsByCity("Bhopal"));
